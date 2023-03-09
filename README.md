@@ -1,2 +1,3 @@
 # estrutura-de-dados-e-tecnica-de-progrmação
-objeto e 
+objeto e lista: estrutura de dados
+
