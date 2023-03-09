@@ -13,9 +13,9 @@ public class lista {
         fim = null;
         tamanho=0;
     }
-    void adicionar(Object info){//cria um elemento novo
-        No no = new No(info);
-        no.info = info;
+    void adicionar(String nome, String tel){//cria um elemento novo
+        No no = new No(nome,tel);
+     //   no.info = info;
         if(tamanho == 0){//se a lista estiver vazia
             inicio = no;
             
@@ -33,12 +33,23 @@ public class lista {
     void imprimirLista(){
         No no = inicio;
         while(i<tamanho){
-        System.out.println(no.info);
+        System.out.println(no.nome);
         no = no.proximo;
         i++;
         }
        
     }
+    String buscaTelefone(String nome){
+        No no = inicio;
+        i=0;
+        while(i<tamanho){
+            if(no.nome.equals(nome)){
+                return no.tel;
+            }
+        }
+        return "não localizado";
+    }
+    
     public static void main(String[] args) {
           lista no = new lista();
           no.imprimirLista();

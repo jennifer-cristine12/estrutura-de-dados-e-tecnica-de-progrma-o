@@ -5,13 +5,17 @@
 package javaapplication2;
 
 public class No {//elementos da lista
-    
-    
+    String nome;
+    String tel;
     Object info;
     No proximo;
     
-    No(Object info){
-        this.info = info;
+    No(String nome, String tel){
+      //  this.info = info;
+        this.tel = tel;
+        this.nome = nome;
         proximo = null;
     }
+
+   
 }
