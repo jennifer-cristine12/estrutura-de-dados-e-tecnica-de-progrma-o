@@ -6,29 +6,46 @@ public class lista {
     No inicio;
     No fim;
     int tamanho;
+    int i=0;
     
-    lista(){
+    lista(){//tamanho da lista
         inicio = null;
         fim = null;
         tamanho=0;
     }
-    void adicionar(object info){
+    void adicionar(Object info){//cria um elemento novo
         No no = new No(info);
         no.info = info;
         if(tamanho == 0){//se a lista estiver vazia
             inicio = no;
-            System.out.println("inicio");
+            
         }
-        else{
+        else{//liga o prox a um proximo elemento
             fim.proximo = no;
-            System.out.println("fim");
+           
         }
         fim = no;
-        tamanho++;
+        tamanho++;//adiciona um item na lista
     }
-
-    public static void main(String[] args) {
+    boolean estaVazia(){
+       return tamanho == 0;
+    }
+    void imprimirLista(){
+        No no = inicio;
+        while(i<tamanho){
+        System.out.println(no.info);
+        no = no.proximo;
+        i++;
+        }
        
     }
-    
+    public static void main(String[] args) {
+          lista no = new lista();
+          no.imprimirLista();
+      
+        
+        
+    }
+
+   
 }

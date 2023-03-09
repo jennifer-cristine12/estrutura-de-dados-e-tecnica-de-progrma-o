@@ -4,11 +4,8 @@
  */
 package javaapplication2;
 
-/**
- *
- * @author FATEC ZONA LESTE
- */
-public class No {
+public class No {//elementos da lista
+    
     
     Object info;
     No proximo;
